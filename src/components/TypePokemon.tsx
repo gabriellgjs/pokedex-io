@@ -1,4 +1,4 @@
-import { Text } from "@chakra-ui/react";
+import { Badge, Text } from "@chakra-ui/react";
 import { useState } from "react";
 
 interface TypePokemonProps {
@@ -18,8 +18,8 @@ export function TypePokemon({type1, type2}: TypePokemonProps) {
   }
 
   return(
-    <Text>
+    <Badge>
       {pokeType(typeOne, typeTwo)}
-    </Text>
+    </Badge>
   )
 }

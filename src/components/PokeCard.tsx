@@ -12,6 +12,7 @@ export function PokeCard() {
         <CardFooter>
           <TypePokemon
             type1="Grass"
+            type2="Poison"
           />
         </CardFooter>
       </Card>
