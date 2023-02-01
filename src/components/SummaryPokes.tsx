@@ -10,9 +10,13 @@ interface PokemonProps {
   offset?: number;
 }
 
-type PokeApiResponse ={
-
-}
+type PokeApiResponse ={  
+  id: number;
+  name: string;
+  sprites: {
+    front_default: string;
+  }
+}[]
 
 type PokesListResponse ={
   results: {
@@ -21,38 +25,40 @@ type PokesListResponse ={
 }
 
 
-export function SummaryPokes({limit= 150, offset = 0, poke}: PokemonProps) {
-  const [pokemon, setPokemon] = useState<{  name: string;
-    sprites: {
-      front_default: string;
-    }}[]>([]);
+export function SummaryPokes({limit= 20, offset = 0, poke}: PokemonProps) {
+  const [pokemons, setPokemons] = useState<PokeApiResponse>([]);
   const [pokemonsList, setPokemonsList] = useState<PokesListResponse>()
 
   useEffect(() =>{
     api.get(`pokemon?limit=${limit}&offset=${offset}`)
-    .then(response =>  setPokemonsList(response.data)
+    .then((response) =>  {
+      setPokemonsList(response.data)
+    }
     )
   },[])
 
   useEffect(()=> {
-    pokemonsList?.results.map((name) => {
-      api.get(`pokemon/${name.name}`).then(response => {
-        setPokemon(prev => [...prev, response.data])
+    pokemonsList?.results.map((_name, index) => {
+       api.get(`pokemon/${_name.name}`).then(response => {
+        setPokemons(prev => [...prev, response.data])
       })
     })
   }, [pokemonsList])
 
 
   return (
-    <Grid templateColumns='repeat(5, 1fr)' gap={0}>
+    <Grid margin={'auto'} mt={5} templateColumns='repeat(4, 1fr)' gap={5}>
       {
-        pokemon && pokemon.map((pokemon, index) => (
-          <PokeCard 
-            key={index}
-            name={pokemon.name}
-            sprites={pokemon.sprites.front_default}
-          />
-        ))
+        pokemons && pokemons.map((_, index) => {
+          const pokeIndex = pokemons.find(pokemon => pokemon.id === index+1)
+            return (
+              <PokeCard 
+                key={index}
+                name={pokeIndex?.name}
+                sprites={pokeIndex?.sprites.front_default}
+              />
+            )
+        })
       }
     </Grid>
   )

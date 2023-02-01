@@ -2,8 +2,8 @@ import { Box, Card, CardHeader, CardBody, CardFooter, Image } from "@chakra-ui/r
 import { TypePokemon } from "./TypePokemon";
 
 interface PokeCardProps {
-  name: string;
-  sprites: string;
+  name?: string;
+  sprites?: string;
 }
 
 export function PokeCard(props: PokeCardProps) {
