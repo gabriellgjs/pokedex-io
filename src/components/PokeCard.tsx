@@ -4,17 +4,23 @@ import { TypePokemon } from "./TypePokemon";
 interface PokeCardProps {
   name?: string;
   sprites?: string;
+  types?: string[]
 }
 
 export function PokeCard(props: PokeCardProps) {
   return(
-      <Card border={"1px solid"} h={"auto"} w={"10rem"}>
-        <CardHeader display={"flex"}>{props.name}</CardHeader>
+      <Card display={"flex"} justifyItems={'center'} alignItems={'center'} border={"1px solid"} h={"auto"} w={"10rem"}>
+        <CardHeader textTransform={"capitalize"} >
+          {props.name}
+        </CardHeader>
         <CardBody>
           <Image boxSize={"100px"}
           src={props.sprites}/>
         </CardBody>
         <CardFooter>
+            <TypePokemon
+              types={props.types}
+            />
         </CardFooter>
       </Card>
   )

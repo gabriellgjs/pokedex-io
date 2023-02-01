@@ -16,6 +16,12 @@ type PokeApiResponse ={
   sprites: {
     front_default: string;
   }
+  types: {
+    slot: number;
+    type: {
+      name: string;
+    }
+  }[]
 }[]
 
 type PokesListResponse ={
@@ -51,11 +57,15 @@ export function SummaryPokes({limit= 20, offset = 0, poke}: PokemonProps) {
       {
         pokemons && pokemons.map((_, index) => {
           const pokeIndex = pokemons.find(pokemon => pokemon.id === index+1)
+
+          const types = pokeIndex?.types.map(type => type.type.name)
+          console.log(types)
             return (
               <PokeCard 
                 key={index}
                 name={pokeIndex?.name}
                 sprites={pokeIndex?.sprites.front_default}
+                types={types}
               />
             )
         })
