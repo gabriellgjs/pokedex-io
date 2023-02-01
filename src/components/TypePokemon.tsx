@@ -8,10 +8,10 @@ interface TypePokemonProps {
 export function TypePokemon({types}: TypePokemonProps) {
 
   return(
-    <Box>
+    <Box >
       {
-        types && types.map(type => (
-          <Badge>
+        types && types.map((type, index) => (
+          <Badge key={index} bg={"gray.200"} textTransform={'capitalize'}>
             {type}
           </Badge>
         )

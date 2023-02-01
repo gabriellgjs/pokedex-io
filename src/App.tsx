@@ -10,7 +10,7 @@ function App() {
   return (
      <>
     <ChakraProvider>
-    <Box h={"100vh"} w="scren">
+    <Box h={"100%"} w="screen"   bg={"blackAlpha.800"} overflowX={'hidden'}>
       <Header />
     <Stack>
       <SummaryPokes poke={50}/>

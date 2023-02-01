@@ -7,7 +7,6 @@ import { HeaderLogo } from "./HeaderLogo";
 export function Header() {
   return (
     <Box 
-      bg={"blackAlpha.800"} 
       w={"100vw"} 
       h={"12rem"} 
       pl={"2rem"}

@@ -9,8 +9,10 @@ interface PokeCardProps {
 
 export function PokeCard(props: PokeCardProps) {
   return(
-      <Card display={"flex"} justifyItems={'center'} alignItems={'center'} border={"1px solid"} h={"auto"} w={"10rem"}>
-        <CardHeader textTransform={"capitalize"} >
+      <Card display={"flex"} justifyItems={'center'} alignItems={'center'} border={"1px solid"} h={"auto"} w={"10rem"}
+      bg={"gray.700"}
+      >
+        <CardHeader textTransform={"capitalize"}  textColor={'white'}>
           {props.name}
         </CardHeader>
         <CardBody>
