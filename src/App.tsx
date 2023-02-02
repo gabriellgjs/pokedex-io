@@ -13,7 +13,7 @@ function App() {
     <Box h={"100%"} w="screen"   bg={"blackAlpha.800"} overflowX={'hidden'}>
       <Header />
     <Stack>
-      <SummaryPokes poke={50}/>
+      <SummaryPokes />
     </Stack>
     </Box>
     </ChakraProvider>    
