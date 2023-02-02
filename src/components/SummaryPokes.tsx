@@ -64,7 +64,7 @@ export function SummaryPokes() {
 
   return (
     <Box margin={'auto'}>
-      <Grid  mt={5} templateColumns='repeat(4, 1fr)' gap={5}>
+      <Grid  mt={5} templateColumns='repeat(5, 1fr)' gap={5}>
         {
           pokemons && pokemons.map((_, index) => {
             if(index+1 > maxSpritesAvaible) {
