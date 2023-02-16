@@ -1,6 +1,4 @@
 import { Card, CardBody, CardFooter, CardHeader, Image } from "@chakra-ui/react";
-import { Link } from 'react-router-dom';
-import Router from "../router";
 import { TypePokemon } from "./TypePokemon";
 
 interface PokeCardProps {
@@ -11,7 +9,6 @@ interface PokeCardProps {
 
 export function PokeCard(props: PokeCardProps) {
   return(
-    <Link to={`/${props.name}`}>
       <Card 
         display={"flex"} 
         justifyItems={'center'} 
@@ -25,7 +22,6 @@ export function PokeCard(props: PokeCardProps) {
                 <Image boxSize={"100px"}
                 src={props.sprites}
                 />
-            <Router />
         </CardHeader>
         <CardBody textTransform={"capitalize"}  textColor={'white'}>
           {props.name}
@@ -36,6 +32,5 @@ export function PokeCard(props: PokeCardProps) {
               />
         </CardFooter>
       </Card>
-              </Link>
   )
 }
