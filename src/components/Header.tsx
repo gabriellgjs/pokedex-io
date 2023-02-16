@@ -12,18 +12,12 @@ export function Header() {
       pl={"2rem"}
       pr={"2rem"}
       display={"flex"} 
-      justifyContent={"space-between"}
+      justifyContent={"center"}
       alignItems={"center"}
     >
-
       <Box display={"flex"} alignItems={"center"} justifyItems={"center"}>
         <HeaderLogo />
-      </Box>  
-
-      <Box display={"flex"}  alignItems={"center"} justifyItems={"center"}>
-      <FindInput />
-      </Box>
-
+      </Box>       
     </Box>
   )
 }

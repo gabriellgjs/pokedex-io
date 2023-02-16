@@ -1,5 +1,8 @@
-import { Box, Card, CardHeader, CardBody, CardFooter, Image } from "@chakra-ui/react";
+import { Box, Card, CardHeader, CardBody, CardFooter, Image, Button } from "@chakra-ui/react";
+import { ModalPokemon } from "./ModalPokemon";
 import { TypePokemon } from "./TypePokemon";
+import { Link, useParams} from 'react-router-dom';
+import Router  from "../router";
 
 interface PokeCardProps {
   name?: string;
@@ -9,21 +12,31 @@ interface PokeCardProps {
 
 export function PokeCard(props: PokeCardProps) {
   return(
-      <Card display={"flex"} justifyItems={'center'} alignItems={'center'} border={"1px solid"} h={"auto"} w={"10rem"}
-      bg={"gray.700"}
-      >
-        <CardHeader textTransform={"capitalize"}  textColor={'white'}>
-          {props.name}
+    <Link to={`/${props.name}`}>
+      <Card 
+        display={"flex"} 
+        justifyItems={'center'} 
+        alignItems={'center'} 
+        border={"1px solid"} 
+        h={"auto"} 
+        w={"10rem"}
+        bg={"gray.700"}
+      > 
+        <CardHeader>
+                <Image boxSize={"100px"}
+                src={props.sprites}
+                />
+            <Router />
         </CardHeader>
-        <CardBody>
-          <Image boxSize={"100px"}
-          src={props.sprites}/>
+        <CardBody textTransform={"capitalize"}  textColor={'white'}>
+          {props.name}
         </CardBody>
         <CardFooter>
             <TypePokemon
               types={props.types}
-            />
+              />
         </CardFooter>
       </Card>
+              </Link>
   )
 }
