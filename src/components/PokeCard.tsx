@@ -1,8 +1,7 @@
-import { Box, Card, CardHeader, CardBody, CardFooter, Image, Button } from "@chakra-ui/react";
-import { ModalPokemon } from "./ModalPokemon";
+import { Card, CardBody, CardFooter, CardHeader, Image } from "@chakra-ui/react";
+import { Link } from 'react-router-dom';
+import Router from "../router";
 import { TypePokemon } from "./TypePokemon";
-import { Link, useParams} from 'react-router-dom';
-import Router  from "../router";
 
 interface PokeCardProps {
   name?: string;

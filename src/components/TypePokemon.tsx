@@ -1,5 +1,4 @@
-import { Badge, Box, Text } from "@chakra-ui/react";
-import { useState } from "react";
+import { Badge, Box } from "@chakra-ui/react";
 
 interface TypePokemonProps {
   types?: string[]

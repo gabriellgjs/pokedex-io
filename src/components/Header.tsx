@@ -1,6 +1,4 @@
-import { Badge, Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Image, Text } from "@chakra-ui/react";
-import { Link } from "phosphor-react";
-import { FindInput } from "./FindInput";
+import { Box } from "@chakra-ui/react";
 import { HeaderLogo } from "./HeaderLogo";
 
 
