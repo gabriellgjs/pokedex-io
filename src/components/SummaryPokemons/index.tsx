@@ -1,4 +1,4 @@
-import { Box, Grid } from "@chakra-ui/react";
+import { Box, SimpleGrid  } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { api } from "../../lib/axios";
 import { LoadMore } from "../LoadMore";
@@ -64,7 +64,11 @@ export function SummaryPokes() {
 
   return (
     <Box margin={'auto'}>
-      <Grid  mt={5} templateColumns='repeat(5, 1fr)' gap={5}>
+      <SimpleGrid 
+        mt={5} 
+        columns={{ base: 1, sm: 2, md:3, lg:5 }}
+        gap={4}
+        >
         {
           pokemons && pokemons.map((_, index) => {
             if(index+1 > maxSpritesAvaible) {
@@ -82,7 +86,7 @@ export function SummaryPokes() {
               )
           })
         }
-      </Grid>
+      </SimpleGrid >
 
      { offSet <= 901 && <LoadMore LoadMorePokemons={handleNewsPokemons}/>} 
     </Box>
