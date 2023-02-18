@@ -20,5 +20,3 @@ Projeto front-end para construção de uma pokédex. Objetivo do projeto é dese
 - Typescript
 - TailwindCSS
 - Chakra-ui
-
-### ❗Ainda não está responsivo❗
