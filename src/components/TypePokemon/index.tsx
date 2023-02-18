@@ -26,7 +26,7 @@ export function TypePokemon({types}: TypePokemonProps) {
     'grass': "#9BCC50",
     'ice': "#51C4E7",
     'poison': "#B97FC9",
-    'rock': "#A4A4A4",
+    'rock': "#A38C21",
     'water': "#4592C4"
   }
 
