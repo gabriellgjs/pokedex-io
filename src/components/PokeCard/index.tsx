@@ -1,5 +1,5 @@
 import { Card, CardBody, CardFooter, CardHeader, Image } from "@chakra-ui/react";
-import { TypePokemon } from "./TypePokemon";
+import { TypePokemon } from "../TypePokemon";
 
 interface PokeCardProps {
   name?: string;

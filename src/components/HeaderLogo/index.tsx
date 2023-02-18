@@ -1,5 +1,5 @@
 import { Box, Image } from "@chakra-ui/react";
-import pokemonLogo from "../assets/pokemon.svg"
+import pokemonLogo from "../../assets/pokemon.svg"
 
 export function HeaderLogo() {
   return (

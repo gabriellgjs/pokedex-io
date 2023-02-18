@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import { HeaderLogo } from "./HeaderLogo";
+import { HeaderLogo } from "../HeaderLogo";
 
 
 export function Header() {

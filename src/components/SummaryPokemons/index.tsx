@@ -1,8 +1,8 @@
 import { Box, Grid } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import { api } from "../lib/axios";
-import { LoadMore } from "./LoadMore";
-import { PokeCard } from "./PokeCard";
+import { api } from "../../lib/axios";
+import { LoadMore } from "../LoadMore";
+import { PokeCard } from "../PokeCard";
 
 
 

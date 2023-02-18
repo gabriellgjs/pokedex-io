@@ -1,6 +1,6 @@
 import { Box, ChakraProvider, Stack } from '@chakra-ui/react'
 import { Header } from './components/Header'
-import { SummaryPokes } from './components/SummaryPokes'
+import { SummaryPokes } from './components/SummaryPokemons'
 import { theme } from './theme'
 
 function App() {
