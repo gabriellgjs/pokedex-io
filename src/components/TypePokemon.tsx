@@ -31,16 +31,22 @@ export function TypePokemon({types}: TypePokemonProps) {
   }
 
   return(
-    <Box >
+    <Box display={'flex'}>
       {
         types && types.map((type, index) => (
             <Badge 
+              display={'flex'}
+              alignItems={'center'}
+              justifyContent={'center'}
               key={index} 
               bg={listColor[type]} 
               textTransform={'capitalize'}
               ml={'0.5rem'}
               rounded={'md'}
-              p={'1'}
+              w={'4rem'}
+              h={"1.5rem"}
+              fontSize={'0.8rem'}
+              fontWeight={'semibold'}
             >
               {type}
             </Badge>

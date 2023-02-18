@@ -23,7 +23,7 @@ export function PokeCard(props: PokeCardProps) {
                 src={props.sprites}
                 />
         </CardHeader>
-        <CardBody textTransform={"capitalize"}  textColor={'white'}>
+        <CardBody textTransform={"capitalize"}  textColor={'white'} fontSize={'1.25rem'} fontWeight={'bold'}>
           {props.name}
         </CardBody>
         <CardFooter>

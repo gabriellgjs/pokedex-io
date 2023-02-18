@@ -1,12 +1,12 @@
 import { Box, ChakraProvider, Stack } from '@chakra-ui/react'
-import { BrowserRouter } from 'react-router-dom'
 import { Header } from './components/Header'
 import { SummaryPokes } from './components/SummaryPokes'
+import { theme } from './theme'
 
 function App() {
   return (
      <>
-      <ChakraProvider>
+      <ChakraProvider theme={theme}>
         <Box h={"100%"} w="screen"   bg={"blackAlpha.800"} overflowX={'hidden'}>
           <Header />
         <Stack>
